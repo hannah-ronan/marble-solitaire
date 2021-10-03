@@ -1,0 +1,282 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://main.gd" type="Script" id=1]
+[ext_resource path="res://marble.tscn" type="PackedScene" id=2]
+[ext_resource path="res://invalid.tscn" type="PackedScene" id=3]
+[ext_resource path="res://empty.tscn" type="PackedScene" id=4]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="table" type="GridContainer" parent="."]
+margin_right = 77.0
+margin_bottom = 77.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="invalid" parent="table" instance=ExtResource( 3 )]
+
+[node name="invalid2" parent="table" instance=ExtResource( 3 )]
+position = Vector2( 11, 0 )
+
+[node name="invalid3" parent="table" instance=ExtResource( 3 )]
+position = Vector2( 0, 11 )
+
+[node name="invalid4" parent="table" instance=ExtResource( 3 )]
+position = Vector2( 11, 11 )
+
+[node name="invalid5" parent="table" instance=ExtResource( 3 )]
+position = Vector2( 55, 0 )
+
+[node name="invalid6" parent="table" instance=ExtResource( 3 )]
+position = Vector2( 66, 0 )
+
+[node name="invalid7" parent="table" instance=ExtResource( 3 )]
+position = Vector2( 66, 11 )
+
+[node name="empty" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 33, 33 )
+
+[node name="empty2" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 22, 0 )
+
+[node name="empty3" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 33, 0 )
+
+[node name="empty4" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 44, 0 )
+
+[node name="empty7" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 22, 11 )
+
+[node name="empty6" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 33, 11 )
+
+[node name="empty5" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 44, 11 )
+
+[node name="empty10" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 22, 22 )
+
+[node name="empty9" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 33, 22 )
+
+[node name="empty8" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 44, 22 )
+
+[node name="empty27" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 55, 22 )
+
+[node name="empty26" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 66, 22 )
+
+[node name="empty29" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 55, 44 )
+
+[node name="empty28" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 66, 44 )
+
+[node name="empty31" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 0, 44 )
+
+[node name="empty30" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 11, 44 )
+
+[node name="empty33" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 0, 22 )
+
+[node name="empty32" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 11, 22 )
+
+[node name="empty13" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 22, 44 )
+
+[node name="empty12" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 33, 44 )
+
+[node name="empty11" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 44, 44 )
+
+[node name="empty16" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 22, 55 )
+
+[node name="empty15" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 33, 55 )
+
+[node name="empty14" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 44, 55 )
+
+[node name="empty19" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 22, 66 )
+
+[node name="empty18" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 33, 66 )
+
+[node name="empty17" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 44, 66 )
+
+[node name="empty22" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 44, 33 )
+
+[node name="empty21" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 55, 33 )
+
+[node name="empty20" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 66, 33 )
+
+[node name="empty25" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 0, 33 )
+
+[node name="empty24" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 11, 33 )
+
+[node name="empty23" parent="table" instance=ExtResource( 4 )]
+position = Vector2( 22, 33 )
+
+[node name="invalid8" parent="table" instance=ExtResource( 3 )]
+position = Vector2( 55, 11 )
+
+[node name="invalid9" parent="table" instance=ExtResource( 3 )]
+position = Vector2( 0, 55 )
+
+[node name="invalid10" parent="table" instance=ExtResource( 3 )]
+position = Vector2( 11, 55 )
+
+[node name="invalid11" parent="table" instance=ExtResource( 3 )]
+position = Vector2( 0, 66 )
+
+[node name="invalid12" parent="table" instance=ExtResource( 3 )]
+position = Vector2( 11, 66 )
+
+[node name="invalid13" parent="table" instance=ExtResource( 3 )]
+position = Vector2( 55, 55 )
+
+[node name="invalid14" parent="table" instance=ExtResource( 3 )]
+position = Vector2( 66, 55 )
+
+[node name="invalid15" parent="table" instance=ExtResource( 3 )]
+position = Vector2( 66, 66 )
+
+[node name="invalid16" parent="table" instance=ExtResource( 3 )]
+position = Vector2( 55, 66 )
+
+[node name="marbles" type="GridContainer" parent="."]
+margin_right = 77.0
+margin_bottom = 77.0
+columns = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="marble" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 22, 0 )
+
+[node name="marble2" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 33, 0 )
+
+[node name="marble3" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 44, 0 )
+
+[node name="marble4" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 22, 11 )
+
+[node name="marble5" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 33, 11 )
+
+[node name="marble6" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 44, 11 )
+
+[node name="marble7" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 0, 22 )
+
+[node name="marble8" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 11, 22 )
+
+[node name="marble9" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 22, 22 )
+
+[node name="marble10" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 33, 22 )
+
+[node name="marble11" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 44, 22 )
+
+[node name="marble12" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 55, 22 )
+
+[node name="marble13" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 66, 22 )
+
+[node name="marble14" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 0, 33 )
+
+[node name="marble15" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 11, 33 )
+
+[node name="marble16" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 22, 33 )
+
+[node name="marble17" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 44, 33 )
+
+[node name="marble18" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 55, 33 )
+
+[node name="marble19" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 66, 33 )
+
+[node name="marble20" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 0, 44 )
+
+[node name="marble21" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 11, 44 )
+
+[node name="marble22" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 22, 44 )
+
+[node name="marble23" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 33, 44 )
+
+[node name="marble24" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 44, 44 )
+
+[node name="marble25" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 55, 44 )
+
+[node name="marble26" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 66, 44 )
+
+[node name="marble27" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 22, 55 )
+
+[node name="marble29" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 33, 55 )
+
+[node name="marble28" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 44, 55 )
+
+[node name="marble30" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 22, 66 )
+
+[node name="marble31" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 33, 66 )
+
+[node name="marble32" parent="marbles" instance=ExtResource( 2 )]
+position = Vector2( 44, 66 )
+
+[node name="marbleholder" type="GridContainer" parent="."]
+margin_left = 88.0
+margin_right = 143.0
+margin_bottom = 77.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="message" type="Label" parent="."]
+margin_top = 88.0
+margin_right = 143.0
+margin_bottom = 110.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
