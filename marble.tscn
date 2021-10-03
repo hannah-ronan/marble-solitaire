@@ -18,4 +18,4 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="Area2D"]
 texture = ExtResource( 2 )
 centered = false
-[connection signal="input_event" from="Area2D" to="." method="_on_input_event"]
+[connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
