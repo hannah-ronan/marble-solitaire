@@ -10,11 +10,23 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node2D",
+"class": "Empty",
+"language": "GDScript",
+"path": "res://empty.gd"
+}, {
+"base": "Node2D",
+"class": "Invalid",
+"language": "GDScript",
+"path": "res://invalid.gd"
+}, {
+"base": "Node2D",
 "class": "Marble",
 "language": "GDScript",
 "path": "res://marble.gd"
 } ]
 _global_script_class_icons={
+"Empty": "",
+"Invalid": "",
 "Marble": ""
 }
 
