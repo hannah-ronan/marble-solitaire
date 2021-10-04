@@ -1,6 +1,8 @@
 extends Node2D
 class_name Invalid
-# Called when the node enters the scene tree for the first time.
+
+signal invalid_clicked
+
 func _ready():
 	pass # Replace with function body.
 
@@ -16,4 +18,4 @@ func _on_input_event(viewport, event, shape_idx):
 
 func on_click():
 	#when an invalid spot is clicked send a signal to game to display invalid message
-	pass
+	emit_signal("invalid_clicked")
