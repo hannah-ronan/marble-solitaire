@@ -7,12 +7,11 @@ signal marble_clicked
 	
 func get_class():
 	 return "Marble"
-	
-
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.is_pressed():
 		#when the mouse clicks the marble
+		if self.active==true:
 			emit_signal("marble_clicked", self)
 
 func toggle_texture():

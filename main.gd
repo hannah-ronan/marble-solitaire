@@ -57,20 +57,21 @@ func try_move(origin, destination):
 	else:
 		#if the destination is not 2 spaces to the left, right, up or down, then the move is invalid
 		valid_move = false
-		$message.set_text("Invalid Move")
+		$message.set_text("Destination is too far away")
 	
 	var junk_marble_found = false
 	var junk_marble
-	for item in marbles:
-		if item.get_class()=="Marble":
-			if junk_marble_loc == item.position:
-				#find the marble object that is at the location of the junk marble
-				junk_marble_found = true
-				junk_marble = item
+	print (junk_marble_loc/11)
+	for marb in marbles:
+		if junk_marble_loc == marb.position and marb.active==true:
+			#find the marble object that is at the location of the junk marble
+			junk_marble_found = true
+			junk_marble = marb
 				
 	if valid_move==true and junk_marble_found==true:
 		#deactivate the marble in between the origin and the destination
 		junk_marble.active = false
+		junk_marble.set_position(Vector2(0,0))
 		#move the old marble over into the marbleholder
 		$table.remove_child(junk_marble)
 		$marbleholder.add_child(junk_marble)
@@ -117,6 +118,6 @@ func invalid_clicked():
 	$message.set_text("Invalid tile clicked, please try again")
 
 
-
 func _on_Button_pressed():
+	#for debugging purposes only
 	$message.set_text(turn_status)
