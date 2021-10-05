@@ -1,23 +1,24 @@
 extends Node
+#load the empty class to be used when moving marbles
 var empty_tile = load("res://empty.tscn")
-
-
-
+#define some directions for moves
 const right = Vector2(22,0)
 const left = Vector2(-22,0)
 const down = Vector2(0,22)
 const up = Vector2(0,-22)
 
+#create some lists to hold all the instances of marbles, empties, and invalid tiles, this makes it easy to iterate through them
 var marbles = []
 var invalids = []
-onready var empties = $marbleholder.get_children()
+var empties = []
+#message label for printing error messages
 onready var messagelabel = $message
+#turn status is determined by what stage the move is at, can be waiting,origin chosen, or destination chosen
 var turn_status = "waiting"
+#the currently selected marble and empty used for making moves
 var current_origin
 var current_dest
 
-func refresh_table():
-	pass
 	
 func _ready():
 	#try_move($table/marble5, $table/empty)
@@ -75,6 +76,7 @@ func try_move(origin, destination):
 		$marbleholder.add_child(junk_marble)
 		#instance a new empty object where the in between marble was
 		var new_empty = empty_tile.instance()
+		new_empty.connect("empty_clicked", self, "empty_clicked")
 		new_empty.set_position(junk_marble_loc)
 		$table.add_child(new_empty)
 		#move the marble to the destination space
@@ -87,21 +89,34 @@ func try_move(origin, destination):
 		$message.set_text("Invalid Move, junk marble not found")
 
 func marble_clicked(clicked_marb):
-	if turn_status == "waiting":
-		clicked_marb.toggle_texture()
-		for marble in marbles:
-			if marble != clicked_marb:
-				marble.reset_texture()
-		turn_status = "origin chosen"
-		current_origin = clicked_marb
-	else:
-		if turn_status == "origin chosen":
-			$message.set_text("please choose a destination")
-			
+	#clicked_marb is the marble object that was clicked
+	#change the texture so its easy to see which marble was clicked
+	clicked_marb.toggle_texture()
+	for marble in marbles:
+		if marble != clicked_marb:
+			marble.reset_texture()
+	#update turn_status so that the user can choose a destination
+	turn_status = "origin chosen"
+	#update current_origin so it can be used in try_move later 
+	current_origin = clicked_marb
+
 func empty_clicked(clicked_empty):
-	turn_status = "destination chosen"
-	current_dest = clicked_empty
-	try_move(current_origin,current_dest)
-	
+	#clicked_empty is the empty object the user clicked
+	#when the user clicks an empty make sure they are in the right stage of the turn
+	for marble in marbles:
+		marble.reset_texture()
+	if turn_status =="origin chosen":
+		turn_status = "destination chosen"
+		current_dest = clicked_empty
+		#now that the destination and origin have been chosen, use try_move to confirm that this is a valid move and try it
+		try_move(current_origin,current_dest)
+	else:
+		$message.set_text("please choose an origin")
+		
 func invalid_clicked():
 	$message.set_text("Invalid tile clicked, please try again")
+
+
+
+func _on_Button_pressed():
+	$message.set_text(turn_status)

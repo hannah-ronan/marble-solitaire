@@ -9,8 +9,5 @@ func _ready():
 
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.is_pressed():
-		self.on_click()
+		emit_signal("empty_clicked", self)
 
-func on_click():
-	#when an empty spot is clicked send a signal to game to display empty message
-	emit_signal("empty_clicked", self)
