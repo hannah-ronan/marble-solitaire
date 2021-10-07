@@ -1,9 +1,22 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 [ext_resource path="res://marble.tscn" type="PackedScene" id=2]
 [ext_resource path="res://invalid.tscn" type="PackedScene" id=3]
 [ext_resource path="res://empty.tscn" type="PackedScene" id=4]
+[ext_resource path="res://slkscr.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.90249, 0.88298, 0.629344, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="DynamicFont" id=2]
+size = 8
+font_data = ExtResource( 5 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -175,16 +188,22 @@ __meta__ = {
 margin_top = 88.0
 margin_right = 143.0
 margin_bottom = 110.0
-text = "error"
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button" type="Button" parent="."]
-margin_left = 77.0
-margin_top = 66.0
-margin_right = 89.0
-margin_bottom = 86.0
+visible = false
+margin_left = 77.8294
+margin_top = 60.9384
+margin_right = 89.8294
+margin_bottom = 80.9384
+rect_rotation = 90.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
